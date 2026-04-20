@@ -1,13 +1,20 @@
 {
   "domain": "onewire_sysbus",
   "name": "1-Wire SysBus",
-  "version": "2.0.0",
-  "documentation": "https://github.com/k3mpaxl/pekaway-ha-onewire-sysbus",
-  "issue_tracker": "https://github.com/k3mpaxl/pekaway-ha-onewire-sysbus/issues",
-  "codeowners": ["@k3mpaxl"],
+  "codeowners": [
+    "@k3mpaxl"
+  ],
   "config_flow": true,
+  "documentation": "https://github.com/k3mpaxl/pekaway-ha-onewire-sysbus",
   "integration_type": "hub",
   "iot_class": "local_polling",
-  "loggers": ["pi1wire", "custom_components.onewire_sysbus"],
-  "requirements": ["pi1wire==0.2.0"]
+  "issue_tracker": "https://github.com/k3mpaxl/pekaway-ha-onewire-sysbus/issues",
+  "loggers": [
+    "pi1wire",
+    "custom_components.onewire_sysbus"
+  ],
+  "requirements": [
+    "pi1wire==0.2.0"
+  ],
+  "version": "2.0.0"
 }
