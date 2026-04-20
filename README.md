@@ -24,6 +24,10 @@ Read **DS18B20** 1-Wire temperature sensors directly from the Linux sysfs bus (`
 | **Raspberry Pi** | `dtoverlay=w1-gpio` in `config.txt` |
 | **Home Assistant** | ≥ 2024.10 |
 
+> **Achtung:** `dtoverlay=uart3` darf nicht aktiviert werden — der 1-Wire Sensor nutzt diesen Pin!
+>
+> See the [VAN PI CORE setup guide](https://github.com/k3mpaxl/pekaway-vanpi-homeassistant#2-configtxt-anpassen) for the complete `config.txt` setup.
+
 ## Installation via HACS
 
 1. **HACS** → **Integrations** → three dots → **Custom repositories**
