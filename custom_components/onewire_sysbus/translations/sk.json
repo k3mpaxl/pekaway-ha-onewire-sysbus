@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nastaviť 1-Wire SysBus",
+        "description": "Nakonfigurujte adresár pripojenia 1-Wire ovládača na vašom Raspberry Pi.",
+        "data": {
+          "mount_dir": "Adresár pripojenia"
+        },
+        "data_description": {
+          "mount_dir": "Cesta k adresáru SysBus 1-Wire, zvyčajne /sys/bus/w1/devices/"
+        }
+      },
+      "reconfigure": {
+        "title": "Preinštalovať 1-Wire SysBus",
+        "description": "Zmeniť adresár pripojenia 1-Wire.",
+        "data": {
+          "mount_dir": "Adresár pripojenia"
+        }
+      }
+    },
+    "error": {
+      "invalid_path": "Adresár nenájdený. Overte, že dtoverlay=w1-gpio je aktívny.",
+      "unknown": "Neočakávaná chyba."
+    },
+    "abort": {
+      "already_configured": "Zariadenie je už nakonfigurované",
+      "mount_dir_mismatch": "Nový adresár pripojenia nezodpovedá tomuto záznamu."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": {
+        "name": "Teplota"
+      }
+    }
+  }
+}

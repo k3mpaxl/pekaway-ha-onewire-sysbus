@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up 1-Wire SysBus",
+        "description": "Configure the 1-Wire kernel driver mount directory on your Raspberry Pi.",
+        "data": {
+          "mount_dir": "Mount directory"
+        },
+        "data_description": {
+          "mount_dir": "Path to the SysBus 1-Wire mount directory, usually /sys/bus/w1/devices/"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigure 1-Wire SysBus",
+        "description": "Change the 1-Wire mount directory.",
+        "data": {
+          "mount_dir": "Mount directory"
+        }
+      }
+    },
+    "error": {
+      "invalid_path": "Mount directory not found. Make sure dtoverlay=w1-gpio is enabled.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+      "mount_dir_mismatch": "The new mount directory does not match this config entry."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": {
+        "name": "Temperature"
+      }
+    }
+  }
+}

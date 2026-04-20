@@ -1,0 +1,38 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configurar 1-Wire SysBus",
+        "description": "Configure o diretório de montagem do driver 1-Wire no seu Raspberry Pi.",
+        "data": {
+          "mount_dir": "Diretório de montagem"
+        },
+        "data_description": {
+          "mount_dir": "Caminho para o diretório de montagem SysBus 1-Wire, geralmente /sys/bus/w1/devices/"
+        }
+      },
+      "reconfigure": {
+        "title": "Reconfigurar 1-Wire SysBus",
+        "description": "Alterar o diretório de montagem 1-Wire.",
+        "data": {
+          "mount_dir": "Diretório de montagem"
+        }
+      }
+    },
+    "error": {
+      "invalid_path": "Diretório não encontrado. Certifique-se de que dtoverlay=w1-gpio está ativado.",
+      "unknown": "Erro inesperado."
+    },
+    "abort": {
+      "already_configured": "O dispositivo já está configurado",
+      "mount_dir_mismatch": "O novo diretório de montagem não corresponde a esta entrada."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "temperature": {
+        "name": "Temperatura"
+      }
+    }
+  }
+}
